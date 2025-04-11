@@ -6,11 +6,13 @@ import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GmailIcon from "../components/icons/GmailIcon.astro";
+import Experiencie from "../components/Experiencie.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
 <Layout>
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-10">
+    <SectionContainer class="py-10 py-50">
       <img
         class="rounded-full size-30 item-center mb-4"
         src="https://avatars.githubusercontent.com/u/134659565?v=4"
@@ -49,6 +51,9 @@ import GmailIcon from "../components/icons/GmailIcon.astro";
           fabianamaya0801@gmail.com
 		</SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer>
+      <Experiencie></Experiencie>
+    </SectionContainer>
   </main>
 </Layout>
