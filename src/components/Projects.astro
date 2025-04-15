@@ -1,0 +1,75 @@
+---
+import Nodejs from "./icons/Nodejs.astro"
+import React from "./icons/React.astro"
+import Javascript from "./icons/Javascript.astro"
+import Html from "./icons/Html.astro"
+import Css from "./icons/Css.astro"
+import Sql from "./icons/Sql.astro"
+
+
+const TAGS = {
+    NODE:{
+        name: 'Node.js',
+        class: 'bg-green-600/90 text-white',
+        icon: Nodejs,
+    },
+    REACT:{
+        name: 'React',
+        class: 'bg-blue-600 text-white',
+        icon: React,
+    },
+    JAVASCRIPT:{
+        name: 'JavaScript',
+        class: 'bg-yellow-300/70 text-white',
+        icon: Javascript,
+    },
+    HTML:{
+        name: 'HTML',
+        class: 'bg-orange-500/70 text-white',
+        icon: Html,
+    },
+    CSS:{
+        name: 'CSS',
+        class: 'bg-purple-400/70 text-white',
+        icon: Css,
+    },
+    SQL:{
+        name: 'SQL',
+        class: 'bg-blue-500/90 text-white',
+        icon: Sql,
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'Trackin APP',
+        description: 'Proyecto de grado en Ingeniería de Software que resuelve la problemática de trazabilidad de inventarios mediante una aplicación. Esta implementa librerías para el seguimiento de movimientos y solicitudes de piezas en la reparación de dispositivos POS.',
+        link: 'https://github.com/FABOOBA08/Tracking',
+        github: 'https://github.com/FABOOBA08/Tracking',
+        image: "/projects/TrackingAPP.webp",
+        tags: [TAGS.NODE, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS, TAGS.SQL ]
+   
+    }
+]
+---
+{
+    PROJECTS.map(({image, title, description, tags})=>
+    <article>
+        <h3 class="text-2xl font-semibold text-blue-500/90 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-4 flex-row mb-2">
+            {
+                tags.map(tag =>(
+                    <li class="pb-3">
+                        <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1  px-2`}>
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                        </span>
+                    </li>
+                ))
+            }
+        </ul>
+        <img class="rounded shadow-2xl shadow-white/20" src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+    </article>
+    )
+}

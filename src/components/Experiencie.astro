@@ -1,0 +1,66 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date : 'Oct 2023 – Oct 2024',
+        title: "Analista de innovación y desarrollo  | Icee Electronis S.A.S",
+        description: [
+      "Diseñé e implementé metodologías ágiles como Scrum para optimizar los procesos internos.",
+      "Desarrollé aplicaciones web en React y Node.js con integración SQL, resolviendo problemas de trazabilidad de inventarios y repuestos.",
+      "Renové la infraestructura tecnológica para mejorar el rendimiento y la seguridad."
+    ],
+        link : '#',
+    },
+    {
+      date : 'Feb 2022 – Sept 2023',
+        title: "Analista de Soporte | Jardines de los Andes S.A.S",
+        description: [
+      "Brindé soprte a las aplicaciones desarrolladas internamentes por el área de desarrollo de la compañia con lenguajes como C# también aplicaciónes Android y bases de datos.",
+      "Administré servidores con Active Directory, configuración de VPN y antivirus corporativo.",
+      "Gestioné el inventario tecnológico y licencias de software, asegurando eficiencia en su uso.",
+      "Implementé soluciones de mantenimiento preventivo y correctivo en hardware y software."
+    ],
+        link : '#',
+    },
+    {
+      date : 'Feb 2021 – Sept 2021',
+        title: "Ingeniero de Soporte | Royher S.A.S",
+        description: [
+      "Participé en la migración de infraestructura tecnológica entre sedes corporativas, asegurando continuidad operativa.",
+      "Coordiné despliegues técnicos en hardware, redes y servidores, optimizando el entorno empresarial."
+    ],
+        link : '#',
+    },
+    {
+      date : 'Nov 2019 – Oct 2020',
+        title: "Analista de Software | Soluciones Bless S.A.S",
+        description: [
+      "Responsable de la elaboración y entrega de manuales técnicos y de usuario para una intranet corporativa.",
+      "Colaboración en la implementación de módulos funcionales de intranet según requerimientos específicos."
+    ],
+        link : '#',
+    },
+    {
+      date : 'Ago 2019 – Oct 2129',
+        title: "Técnico de soporte | SOLINDTEC S.A.S",
+        description: [
+      " Implementación de soluciones de impresión en proyectos como la producción de cartones de votación para la Registraduría Nacional de Colombia.",
+      "Configuración y soporte técnico de impresoras industriales con tecnología de HP."
+    ],
+        link : '#',
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700  ml-3">
+
+  {
+    EXPERIENCE.map(experience => 
+    <li class="mb-10 ms-4">
+      <ExperienceItem { ... experience}/>
+    </li>
+  )
+  }
+  
+  </li>
+</ol>
