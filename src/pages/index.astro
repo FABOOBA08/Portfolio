@@ -9,17 +9,19 @@ import GmailIcon from "../components/icons/GmailIcon.astro";
 import Experiencie from "../components/Experiencie.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro"
+import Projects from "../components/Projects.astro"
 ---
 
 <Layout>
-  <main>
-    <SectionContainer id="sobremi" class="py-50 pb-50">
+  <main class="px-4">
+    <SectionContainer id="sobremi" class="py-20 pb-50">
       <img
         class="rounded-full size-30 item-center mb-4"
         src="https://avatars.githubusercontent.com/u/134659565?v=4"
         alt="Fabián photo"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Hola, soy Fabián <a
           href="https://www.linkedin.com/in/fabian-amaya-lancheros-b06664290/"
           target="_blank"
@@ -28,7 +30,7 @@ import Briefcase from "../components/icons/Briefcase.astro";
           ><Badge>Disponible para trabajar</Badge></a
         >
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class=" text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span class="text-indigo-400/90">Ingeniero de software</span> full stack
         apasionado por la tecnología y la innovación, con experiencia en el <span
           class="text-blue-500/90"
@@ -38,27 +40,34 @@ import Briefcase from "../components/icons/Briefcase.astro";
         >
       </h2>
 
-      <nav class="flex gap-x-4 mt-5">
+      <nav class="flex gap-4 mt-5 flex-grap">
         <SocialPill href="https://www.linkedin.com/in/fabian-amaya-lancheros-b06664290/">
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
 		<SocialPill href="https://github.com/FABOOBA08">
-			<GitHubIcon class="size-6" />
+			<GitHubIcon class="size-4 md:size-6" />
           GitHub
 		</SocialPill>
 		<SocialPill href="mailto:fabianamaya0801@gmail.com">
-			<GmailIcon class="size-6" />
+			<GmailIcon class="size-4 md:size-6" />
           fabianamaya0801@gmail.com
 		</SocialPill>
       </nav>
     </SectionContainer>
     <SectionContainer id="experiencia" class="py-20">
       <h2 class="text-3xl font-semi-bold mb-6 flex gap-x-3 items-center">
-        <Briefcase class="size-8"></Briefcase>
+        <Briefcase class="size-7"></Briefcase>
         Experiencia laboral
       </h2>
       <Experiencie></Experiencie>
+    </SectionContainer>
+    <SectionContainer id="proyectos" class="py-20">
+      <h2 class="text-3xl font-semi-bold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7"></CodeIcon>
+        Proyectos
+      </h2>
+      <Projects></Projects>
     </SectionContainer>
   </main>
 </Layout>
