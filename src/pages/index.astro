@@ -8,11 +8,12 @@ import SocialPill from "../components/SocialPill.astro";
 import GmailIcon from "../components/icons/GmailIcon.astro";
 import Experiencie from "../components/Experiencie.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout>
   <main>
-    <SectionContainer class="py-10 py-50">
+    <SectionContainer id="sobremi" class="py-50 pb-50">
       <img
         class="rounded-full size-30 item-center mb-4"
         src="https://avatars.githubusercontent.com/u/134659565?v=4"
@@ -52,7 +53,11 @@ import SectionContainer from "../components/SectionContainer.astro";
 		</SocialPill>
       </nav>
     </SectionContainer>
-    <SectionContainer>
+    <SectionContainer id="experiencia" class="py-20">
+      <h2 class="text-3xl font-semi-bold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8"></Briefcase>
+        Experiencia laboral
+      </h2>
       <Experiencie></Experiencie>
     </SectionContainer>
   </main>
