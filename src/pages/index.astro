@@ -11,63 +11,71 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro"
 import Projects from "../components/Projects.astro"
+import ScrollToTop from "../components/ScrollToTop.astro";
 ---
 
 <Layout>
   <main class="px-4">
-    <SectionContainer id="sobremi" class="py-20 pb-50">
-      <img
-        class="rounded-full size-30 item-center mb-4"
-        src="https://avatars.githubusercontent.com/u/134659565?v=4"
-        alt="Fabián photo"
-      />
-      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-        Hola, soy Fabián <a
-          href="https://www.linkedin.com/in/fabian-amaya-lancheros-b06664290/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-          ><Badge>Disponible para trabajar</Badge></a
-        >
-      </h1>
-      <h2 class=" text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span class="text-indigo-400/90">Ingeniero de software</span> full stack
-        apasionado por la tecnología y la innovación, con experiencia en el <span
-          class="text-blue-500/90"
-          >desarrollo de aplicaciones web, diseño de interfaces UI/UX</span
-        >, <span class="text-blue-100">
-          administración de infraestructuras tecnológicas y amante de SCRUM.</span
-        >
-      </h2>
+    <ScrollToTop class="fixed bottom-4 right-4 z-50" />
+    <SectionContainer id="sobremi" class="py-16 sm:py-20">
+      <div class="flex flex-col items-start text-left max-w-3xl">
+        <!-- Imagen siempre alineada a la izquierda y encima del texto -->
+        <img
+          class="rounded-full w-30 h-30 mb-4"
+          src="https://avatars.githubusercontent.com/u/134659565?v=4"
+          alt="Fabián photo"
+        />
 
-      <nav class="flex gap-4 mt-5 flex-grap">
-        <SocialPill href="https://www.linkedin.com/in/fabian-amaya-lancheros-b06664290/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-		<SocialPill href="https://github.com/FABOOBA08">
-			<GitHubIcon class="size-4 md:size-6" />
-          GitHub
-		</SocialPill>
-		<SocialPill href="mailto:fabianamaya0801@gmail.com">
-			<GmailIcon class="size-4 md:size-6" />
-          fabianamaya0801@gmail.com
-		</SocialPill>
-      </nav>
+        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-4 pb-6 lg:pb-10">
+          Hola, soy Fabián
+          <a
+            href="https://www.linkedin.com/in/fabian-amaya-lancheros-b06664290/"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center"
+          >
+            <Badge>Disponible para trabajar</Badge>
+          </a>
+        </h1>
+
+        <h2 class="text-lg sm:text-xl lg:text-2xl max-w-[700px] text-wrap">
+          <span class="text-indigo-400/90">Ingeniero de software</span> full stack apasionado por la tecnología y la innovación, con experiencia en el
+          <span class="text-blue-500/90">desarrollo de aplicaciones web, diseño de interfaces UI/UX</span>,
+          <span class="text-blue-100">administración de infraestructuras tecnológicas y amante de SCRUM.</span>
+        </h2>
+
+        <nav class="flex flex-col sm:flex-row gap-5 mt-5 items-center sm:items-start justify-center sm:justify-start max-w-full sm:max-w-[1120px] mx-auto">
+          <SocialPill href="https://www.linkedin.com/in/fabian-amaya-lancheros-b06664290/">
+            <LinkedInIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/FABOOBA08">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:fabianamaya0801@gmail.com">
+            <GmailIcon class="size-4 md:size-6" />
+            fabianamaya0801@gmail.com
+          </SocialPill>
+        </nav>
+        
+      </div>
     </SectionContainer>
-    <SectionContainer id="experiencia" class="py-20">
-      <h2 class="text-3xl font-semi-bold mb-6 flex gap-x-3 items-center">
-        <Briefcase class="size-7"></Briefcase>
+
+    <SectionContainer id="experiencia" class="py-16 sm:py-20">
+      <h2 class="text-2xl sm:text-3xl  mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-6 sm:size-7" />
         Experiencia laboral
       </h2>
-      <Experiencie></Experiencie>
+      <Experiencie />
     </SectionContainer>
-    <SectionContainer id="proyectos" class="py-20">
-      <h2 class="text-3xl font-semi-bold mb-6 flex gap-x-3 items-center">
-        <CodeIcon class="size-7"></CodeIcon>
+
+    <SectionContainer id="proyectos" class="py-16 sm:py-20">
+      <h2 class="text-2xl sm:text-3xl  mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-6 sm:size-7" />
         Proyectos
       </h2>
-      <Projects></Projects>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
